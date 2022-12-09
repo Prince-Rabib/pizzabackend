@@ -28,8 +28,7 @@ exports.updateOrder = (req, res, next) => {
   }
 
   const refund = req.body.refund;
-//  console.log(orderId);
-//  console.log(refund);
+
 
   Order.findById(orderId)
     .then((order) => {
@@ -72,7 +71,7 @@ exports.postCreateOrder = (req, res, next) => {
   const orderData = req.body.orderData;
   const totalOrderedPrice = req.body.totalOrderedPrice;
   const totalOrderedQuantity = req.body.totalOrderedQuantity;
-  const refund ='Hellow';
+  const refund ='';
 
   const order = new Order(newUserData, orderData, totalOrderedPrice, totalOrderedQuantity, refund);
 
